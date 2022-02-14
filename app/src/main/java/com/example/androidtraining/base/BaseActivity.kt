@@ -15,6 +15,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     }
 
+
     protected fun onCreatedViewDone() {
         init()
         observe()
