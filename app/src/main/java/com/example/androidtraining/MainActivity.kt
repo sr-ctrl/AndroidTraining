@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.androidtraining.base.BaseActivity
 import com.example.androidtraining.databinding.ActivityMainBinding
+import com.example.androidtraining.message.MessageActivity
 import com.example.androidtraining.utils.ActivityUtils
 class MainActivity : BaseActivity() {
     lateinit var binding: ActivityMainBinding

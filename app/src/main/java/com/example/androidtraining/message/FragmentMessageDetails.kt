@@ -69,7 +69,7 @@ class FragmentMessageDetails : BaseFragment() {
         //initialising viewmodel
 //        viewModel = ViewModelProvider(this).get(MessageViewModel::class.java)
 
-        (requireActivity() as TestInterFace).fragmentMessageDetails()
+//        (requireActivity() as TestInterFace).fragmentMessageDetails()
 //        Log.i("Debug", "${test.toString()}")
 //        binding.day.text = test.toString()
     }

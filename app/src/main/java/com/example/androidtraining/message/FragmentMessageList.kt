@@ -19,6 +19,7 @@ import com.example.androidtraining.base.BaseFragment
 import com.example.androidtraining.databinding.FragmentListItemBinding
 import com.example.androidtraining.databinding.FragmentMessageListBinding
 
+
 class FragmentMessageList:BaseFragment() {
     companion object{
         fun newInstance():FragmentMessageList{
@@ -29,7 +30,7 @@ class FragmentMessageList:BaseFragment() {
         }
     }
 
-    private lateinit var adapter:Adapter
+     lateinit var adapter:Adapter
     lateinit var binding : FragmentMessageListBinding
 
     override fun onCreateView(
