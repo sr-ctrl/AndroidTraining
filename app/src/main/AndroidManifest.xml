@@ -20,11 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".message.MessageActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".liveData.ActivityLiveData"
+            android:name=".MessageActivity"
             android:exported="true">
         </activity>
         <activity

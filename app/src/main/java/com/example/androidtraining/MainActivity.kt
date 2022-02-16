@@ -5,11 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.androidtraining.base.BaseActivity
 import com.example.androidtraining.databinding.ActivityMainBinding
-import com.example.androidtraining.liveData.ActivityLiveData
-import com.example.androidtraining.message.MessageActivity
 import com.example.androidtraining.utils.ActivityUtils
-
-
 class MainActivity : BaseActivity() {
     lateinit var binding: ActivityMainBinding
 
@@ -33,10 +29,6 @@ class MainActivity : BaseActivity() {
     override fun setListener() {
         binding.MessageActivity.setOnClickListener {
             startActivity(Intent(this, MessageActivity::class.java))
-            goNext()
-        }
-        binding.ActivityliveData.setOnClickListener {
-            startActivity(Intent(this,ActivityLiveData::class.java))
             goNext()
         }
         binding.ActivityUtils.setOnClickListener {

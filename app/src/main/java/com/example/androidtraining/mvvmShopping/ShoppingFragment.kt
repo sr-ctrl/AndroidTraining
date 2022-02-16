@@ -20,12 +20,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.androidtraining.R
 import com.example.androidtraining.base.BaseFragment
-import com.example.androidtraining.databinding.FragmentListItemBinding
+
 import com.example.androidtraining.databinding.FragmentShoppingBinding
 import com.example.androidtraining.databinding.ShoppingItemBinding
 import com.example.androidtraining.mvvmRetrofit.Post
 import com.google.gson.internal.bind.ReflectiveTypeAdapterFactory
 import org.koin.android.ext.android.inject
+import kotlin.math.log
 
 class ShoppingFragment : BaseFragment(){
 
@@ -66,7 +67,9 @@ class ShoppingFragment : BaseFragment(){
             adapter.items = it as ArrayList<Shop>
             adapter.notifyDataSetChanged()
             Log.i("Debug", "observe:$it ")
-
+            it.map {
+                Log.i("Debug", "id:${it.id} ")
+            }
         })
     }
 
