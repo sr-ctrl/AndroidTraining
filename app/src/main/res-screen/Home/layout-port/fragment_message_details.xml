@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dcdcdc">
+        android:background="#F9FAFB">
 
         <LinearLayout
             android:id="@+id/top_heading"
@@ -31,9 +31,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/item_top_date_background"
             android:gravity="center"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="6dp"
-            android:text="Today"
+            android:padding="6dp"
+            android:text="Yesterday"
             android:visibility="visible"
             android:textSize="14sp"
             android:layout_marginTop="6dp"
@@ -45,8 +44,8 @@
             android:id="@+id/messageList"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="10dp"
             app:layout_constraintBottom_toTopOf="@+id/layout_messageArea"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/top_heading" />
 
@@ -74,11 +73,13 @@
             <EditText
                 android:id="@+id/inputMessage"
                 android:layout_width="0dp"
-                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginEnd="16dp"
                 android:paddingBottom="6dp"
                 android:paddingTop="6dp"
                 android:background="@drawable/message_input_text_background"
@@ -95,6 +96,7 @@
                 android:layout_gravity="bottom"
                 android:gravity="center"
                 android:padding="8dp"
+                android:visibility="visible"
                 android:src="@drawable/icon_send_message"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
