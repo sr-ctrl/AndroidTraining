@@ -12,6 +12,9 @@ class ShoppingViewModel(application: AppApplication, private val repository: Sho
 
     val shoppingList = MutableLiveData<List<Shop>>()
     val error = MutableLiveData<String>()
+    val error2 = MutableLiveData<String>()
+    val error3 = MutableLiveData<String>()
+
 
     fun getShoppingItem(){
         val result = repository.getShopItem()
@@ -22,7 +25,10 @@ class ShoppingViewModel(application: AppApplication, private val repository: Sho
             }
 
             override fun onFailure(call: Call<List<Shop>>, t: Throwable) {
-                error.postValue(t.message)
+                Log.i("Debug", "onFailure: ${t.message} ")
+                Log.i("Debug", "onFailure:${(t.message)} ")
+                Log.i("Debug", "onFailure:${(t.localizedMessage)}")
+                Log.i("Debug", "onFailure:${(t.cause.toString())} ")
             }
 
         })
