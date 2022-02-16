@@ -7,7 +7,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 const val POST_BASE_URL = "https://jsonplaceholder.typicode.com/"
-const val SHOP_BASE_URL = "https://fakestoreapi.com/"
+const val SHOP_BASE_URL = "https://fakestoreapi.com"
 val retrofitModule = module {
 
     fun getShopInstance() : ShopService {
