@@ -48,6 +48,7 @@ android {
                     'src/main/res-screen/Utils',
                     'src/main/res-screen/Utils/TextWatcher',
                     'src/main/res-screen/MvvmRetrofit',
+                    'src/main/res-screen/Fragment',
             ]
         }
     }

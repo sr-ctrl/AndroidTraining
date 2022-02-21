@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.androidtraining.R
 import com.example.androidtraining.base.BaseActivity
 import com.example.androidtraining.databinding.ActivityUtilsBinding
+import com.example.androidtraining.fragment.FragmentSpinner
 
 class ActivityUtils : BaseActivity(){
     private lateinit var binding: ActivityUtilsBinding
@@ -28,7 +29,15 @@ class ActivityUtils : BaseActivity(){
     }
 
     override fun load() {
-        supportFragmentManager.beginTransaction().add(R.id.fragment_container, FragmentTextWatcher.newInstance(), "")
+//        supportFragmentManager
+//            .beginTransaction()
+//            .replace(R.id.fragment_container,
+//            FragmentTextWatcher.newInstance(), "")
+//            .commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container,
+            FragmentSpinner.newInstance(),"")
             .commit()
     }
 }
