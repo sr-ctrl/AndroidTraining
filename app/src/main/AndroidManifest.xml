@@ -19,6 +19,7 @@
             android:name=".message.MessageActivity"
             android:exported="true">
         </activity>
+
         <activity
             android:name=".utils.ActivityUtils"
             android:exported="true">

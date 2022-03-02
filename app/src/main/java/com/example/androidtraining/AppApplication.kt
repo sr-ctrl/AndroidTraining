@@ -10,7 +10,9 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 
 class AppApplication : MultiDexApplication(){
-
+//    val  applicationScope = CoroutineScope(SupervisorJob())
+//    val database by lazy { RoomInstance.getDatabase(this,applicationScope) }
+//    val repository by lazy { RoomRepository(database.dataDao()) }
     companion object {
         lateinit var instance: AppApplication
     }
