@@ -13,11 +13,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".message.MessageActivity"
@@ -26,9 +22,30 @@
         <activity
             android:name=".utils.ActivityUtils"
             android:exported="true">
+
         </activity>
         <activity android:name=".fragment.ActivityFragmentContainer"
             android:exported="true"/>
+        <activity android:name=".collapseToolBar.ActivityCollapseToolBar"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".customCollapseToolBar.ActivityCustomCollapseToolBar"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".bottomsheetdialog.MainActivityBottomSheet"
+            android:exported="true">
+
+        </activity>
+
     </application>
 
 </manifest>

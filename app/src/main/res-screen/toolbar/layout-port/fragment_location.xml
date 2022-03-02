@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/til_transaction"-->
+        <!--            style="@style/EditBoxLayout.White"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="@dimen/dp_20"-->
+        <!--            android:hint="Test"-->
+        <!--            app:endIconDrawable="@drawable/ic_selection_down"-->
+        <!--            app:endIconMode="custom"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                style="@style/EditBoxLayout.InputText.Readonly.White"-->
+        <!--                android:editable="false"-->
+        <!--                android:focusable="false"-->
+        <!--                android:inputType="none" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <TextView
+            android:id="@+id/selectedText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="bottm_sheet"
+            android:paddingStart="@dimen/dp_20"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

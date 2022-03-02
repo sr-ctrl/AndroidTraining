@@ -19,15 +19,15 @@ class ShoppingViewModel(application: AppApplication, private val repository: Sho
     fun getShoppingItem(){
         val result = repository.getShopItem()
         result.enqueue(object : Callback<List<Shop>> {
+
             override fun onResponse(call: Call<List<Shop>>, response: Response<List<Shop>>) {
                 shoppingList.value = response.body()
-                Log.i("Debug", "onResponse: api called ")
+//                Log.i("Debug", "onResponse: api called ${shoppingList.value}")
+//                Log.i("Debug", "onResponse: api called res ${response.body()}")
             }
 
             override fun onFailure(call: Call<List<Shop>>, t: Throwable) {
                 Log.i("Debug", "onFailure: ${t.message} ")
-                Log.i("Debug", "onFailure:${(t.message)} ")
-                Log.i("Debug", "onFailure:${(t.localizedMessage)}")
                 Log.i("Debug", "onFailure:${(t.cause.toString())} ")
             }
 

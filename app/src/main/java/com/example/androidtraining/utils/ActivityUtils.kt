@@ -29,15 +29,15 @@ class ActivityUtils : BaseActivity(){
     }
 
     override fun load() {
-//        supportFragmentManager
-//            .beginTransaction()
-//            .replace(R.id.fragment_container,
-//            FragmentTextWatcher.newInstance(), "")
-//            .commit()
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.fragment_container,
-            FragmentSpinner.newInstance(),"")
+            FragmentTextWatcher.newInstance(), "")
             .commit()
+//        supportFragmentManager
+//            .beginTransaction()
+//            .replace(R.id.fragment_container,
+//            FragmentSpinner.newInstance(),"")
+//            .commit()
     }
 }

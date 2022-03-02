@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.androidtraining.R
 import com.example.androidtraining.base.BaseFragment
-import com.example.androidtraining.databinding.FragmentABinding
 import com.example.androidtraining.databinding.FragmentCBinding
 
 class FragmentC :BaseFragment() {
@@ -29,7 +28,7 @@ class FragmentC :BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_c,null,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_contact,null,false)
         Log.i("Debug", "onCreateView: FragmentC")
         return binding.root
     }

@@ -29,7 +29,7 @@ class FragmentA : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_a,null,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_location,null,false)
         Log.i("Debug", "onCreateView: FragmentA")
         return binding.root
     }
@@ -53,7 +53,6 @@ class FragmentA : BaseFragment() {
     }
 
     override fun Load() {
-
     }
 
 

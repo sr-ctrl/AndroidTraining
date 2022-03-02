@@ -8,4 +8,37 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dcdcdc">#DCDCDC</color>
+    <color name="_888E9C">#888E9C</color>
+    <color name="_F07D50">#F07D50</color>
+
+    <color name="colorPrimary">#375de4</color>
+    <color name="colorPrimaryDark">#FF313233</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="smokyWhite">#fafafa</color>
+
+    <color name="lightText">#c9d3f7</color>
+    <color name="hintColor">#b7c1e4</color>
+    <color name="searchBarColor">#FF38393C</color>
+    <color name="greenBtnColor">#48ceb9</color>
+    <color name="lightBlue">#e6f2ff</color>
+    <color name="textBlue">#268eff</color>
+    <color name="deepBlue">#425186</color>
+    <color name="Black">#FF1E1D1D</color>
+
+
+    <color name="Primary">#37464f</color>
+    <color name="Primary_Dark">#101f27</color>
+    <color name="Primary_Light">#62717b</color>
+
+    //Secondary
+    <color name="Secondary">#263238</color>
+    <color name="Secondary_Dark">#000a12</color>
+    <color name="Secondary_Light">#4f5b62</color>
+    <color name="grey">#DAD6D6</color>
+    <color name="dark_grey">#888E9C</color>
+    <color name="_EAECEF">#EAECEF</color>
+    <color name="_ED622B">#ED622B</color>
+    <color name="_AFB4BE">#AFB4BE</color>
+    <color name="_DCDCDC_body_bg">#f4f5f7</color>
+    <color name="_272F3E">#272F3E</color>
 </resources>

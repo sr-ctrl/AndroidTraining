@@ -52,7 +52,7 @@ class ShoppingFragment : BaseFragment(){
     }
 
     override fun init() {
-        Log.i("Debug", "shopping fragment called ")
+//        Log.i("Debug", "shopping fragment called ")
         //get viewmodel using viewmodel provider
 //       val retrofitInstance = ShopService.getShopInstance()
 //        viewModel = ViewModelProvider(this,ShopViewModelFactory(ShopRepository(retrofitInstance))).get(ShoppingViewModel::class.java)
@@ -63,12 +63,12 @@ class ShoppingFragment : BaseFragment(){
 
     override fun observe() {
         viewModel.shoppingList.observe(this,{
-            Log.i("Debug", "observing the list $it ")
+//            Log.i("Debug", "observing the list $it ")
             adapter.items = it as ArrayList<Shop>
             adapter.notifyDataSetChanged()
-            Log.i("Debug", "observe:$it ")
+//            Log.i("Debug", "observe:$it ")
             it.map {
-                Log.i("Debug", "id:${it.id} ")
+//                Log.i("Debug", "id:${it.id} ")
             }
         })
     }
@@ -78,18 +78,18 @@ class ShoppingFragment : BaseFragment(){
     }
 
     override fun Load() {
-        viewModel.error.observe(this,{
+//        viewModel.error.observe(this,{
+////            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+//            Log.i("Debug", "Load:$it ")
+//        })
+//        viewModel.error2.observe(this,{
 //            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-            Log.i("Debug", "Load:$it ")
-        })
-        viewModel.error2.observe(this,{
-            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-            Log.i("Debug", "Load:$it ")
-        })
-        viewModel.error3.observe(this,{
-//            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-            Log.i("Debug", "Load:$it ")
-        })
+//            Log.i("Debug", "Load:$it ")
+//        })
+//        viewModel.error3.observe(this,{
+////            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+//            Log.i("Debug", "Load:$it ")
+//        })
 
     }
 
@@ -119,23 +119,19 @@ class ShoppingFragment : BaseFragment(){
             holder.binding.itemTitle.text = item.category
             holder.binding.itemCategory.text = item.title
             holder.binding.price.text = "Price:${item.price}"
-            holder.binding.count.text = "Count:${item.rating.count}"
-            holder.binding.rate.text = "Rating:${item.rating.rate}"
+            holder.binding.count.text = "Count:${item.rating?.count}"
+            holder.binding.rate.text = "Rating:${item.rating?.rate}"
             item.image.let {
                 Glide.with(requireActivity())
                     .load(it)
                     .into(holder.binding.itemImage)
             }
         }
-
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
             val binding = DataBindingUtil.inflate<ShoppingItemBinding>(
                 LayoutInflater.from(parent.context),R.layout.shopping_item,parent,false)
             return ItemHolder(binding)
         }
-
         inner class ItemHolder(val binding:ShoppingItemBinding):RecyclerView.ViewHolder(binding.root)
-
     }
 }

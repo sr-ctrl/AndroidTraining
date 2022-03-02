@@ -22,4 +22,89 @@
     <style name="Widget.AppTheme.MaterialCalendar.HeaderToggleButton" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
         <item name="android:visibility">gone</item>
     </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="expandedBarTextStyle" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+
+    </style>
+
+    <!-- Dialog styles-->
+    <!-- Dialog Box animation theme -->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+    <!--bottom sheet dialog-->
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="BottomSheetDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!--Edit text style-->
+    <style name="EditBoxLayout.White" parent="EditBoxLayout.Base">
+        <item name="endIconDrawable">@drawable/ic_clear_text_888e9c</item>
+        <item name="android:background">@drawable/transparent</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="helperTextTextColor">@color/_ED622B</item>
+
+    </style>
+
+    <!--text inout layout-->
+    <style name="EditBoxLayout.Base" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColorHint">@color/_AFB4BE</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="endIconTint">@null</item>
+        <item name="hintTextAppearance">@style/TilHintText</item>
+        <item name="hintTextColor">@color/_AFB4BE</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="helperTextTextAppearance">@style/TilErrorText</item>
+    </style>
+    <style name="TilHintText" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:textSize">11sp</item>
+
+    </style>
+    <style name="TilErrorText" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="EditBoxLayout.InputText.Readonly.White" parent="EditBoxLayout.InputText.Base">
+        <item name="android:background">@drawable/textview_white</item>
+        <item name="android:textColor">@color/_272F3E</item>
+    </style>
+    <style name="EditBoxLayout.InputText" parent="EditBoxLayout.InputText.Base">
+        <item name="android:background">@drawable/edit_text_selector</item>
+    </style>
+    <style name="EditBoxLayout.InputText.Base">
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:paddingLeft">10dp</item>
+    <item name="android:paddingRight">10dp</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:imeOptions">actionDone</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textColor">@color/_EAECEF</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:maxLength">50</item>
+    </style>
 </resources>

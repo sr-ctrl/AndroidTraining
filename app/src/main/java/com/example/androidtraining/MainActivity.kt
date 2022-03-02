@@ -6,11 +6,12 @@ import android.os.PersistableBundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.example.androidtraining.base.BaseActivity
+import com.example.androidtraining.collapseToolBar.ActivityCollapseToolBar
 import com.example.androidtraining.databinding.ActivityMainBinding
 import com.example.androidtraining.fragment.ActivityFragmentContainer
 import com.example.androidtraining.message.MessageActivity
 import com.example.androidtraining.utils.ActivityUtils
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(),Step {
     lateinit var binding: ActivityMainBinding
 
 
@@ -73,10 +74,26 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(this,ActivityFragmentContainer::class.java))
             goNext()
         }
+        binding.ActivityToolBar.setOnClickListener {
+            toActivity(0)
+        }
 
     }
 
     override fun load() {
 
     }
+
+    override fun toActivity(index: Int) {
+        when(index){
+            0 -> {
+                startActivity(Intent(this,ActivityCollapseToolBar::class.java))
+                goNext()
+            }
+        }
+    }
+}
+
+interface Step {
+    fun toActivity(index:Int)
 }
